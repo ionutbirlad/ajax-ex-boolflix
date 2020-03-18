@@ -105,11 +105,15 @@ header .actions li{
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  padding: 10px;
 }
 .wrapper .row .card img{
   width: 90px;
 }
 .wrapper .row .card .text{
+  width: 100%;
+}
+.wrapper .row .card .stars{
   width: 100%;
 }
 

@@ -43,7 +43,7 @@ $(document).ready(function () {
               title: films[i].title,
               original: films[i].original_title,
               language: films[i].original_language,
-              rating: films[i].vote_average
+              rating: Math.ceil(films[i].vote_average / 2)
             };
             var templateCompiled = template(film);
             $(templateCompiled).insertAfter(".row .card:last-child");
