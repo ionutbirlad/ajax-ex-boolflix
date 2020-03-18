@@ -75,8 +75,8 @@ header .actions li{
   overflow: hidden;
 }
 .wrapper .row .card{
-  min-width: 80px;
-  height: 150px;
+  min-width: 100px;
+  min-height: 200px;
   background: #2ecc71;
   color: #fff;
   border-radius: 10px;
@@ -86,6 +86,12 @@ header .actions li{
   align-items: center;
   justify-content: space-around;
   text-align: center;
+}
+.wrapper .row .card img{
+  width: 90px;
+}
+.wrapper .row .card .text{
+  width: 100%;
 }
 
 

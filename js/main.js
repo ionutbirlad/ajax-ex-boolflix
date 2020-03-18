@@ -26,7 +26,7 @@ $(document).ready(function () {
         console.log(films);
         for (var i = 0; i < films.length; i++) {
           var film = {
-            image: baseImageUrl + "/w500/" + films[i].poster_path,
+            image: baseImageUrl + "/w342/" + films[i].poster_path,
             title: films[i].title,
             original: films[i].original_title,
             language: films[i].original_language,
