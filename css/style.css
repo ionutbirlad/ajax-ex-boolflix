@@ -67,12 +67,31 @@ header .actions li{
 .wrapper{
   background: #bdc3c7;
 }
-
 .wrapper .row{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
+}
+.wrapper .row::before{
+  font-family: "FontAwesome";
+  content: "\f053";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.wrapper .row::after{
+  font-family: "FontAwesome";
+  content: "\f054";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
 }
 .wrapper .row .card{
   min-width: 100px;
