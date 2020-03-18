@@ -1,3 +1,4 @@
+/* GENERALE */
 *{
   margin: 0;
   padding: 0;
@@ -14,3 +15,51 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+/* GENERALE */
+
+
+/* HEADER */
+header{
+  height: 70px;
+  background: #141414;
+  color: #fff;
+}
+
+header .logo,
+header .menu{
+  height: 70px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .actions{
+  height: 70px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo img{
+  height: 60px;
+}
+
+header .menu li,
+header .actions li{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+
+
+
+/* HEADER */
