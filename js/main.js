@@ -88,6 +88,11 @@ $(document).ready(function () {
                 var percentualeRating = (film.rating * 100) / 5;
                 // console.log(percentualeRating);
                 $(".row.series .card:last-child").find(".stars-inner").css( "width", percentualeRating + "%");
+
+                // GESTIONE TITOLI
+                if (film.title == film.original) {
+                  $(".row.series .card:last-child").find(".titolo").remove();
+                }
               }
           },
           error: function (err) {
