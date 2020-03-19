@@ -35,6 +35,10 @@
             <li>
               <i class="fas fa-search"></i>
               <input id="search-text" type="search" placeholder="Titoli, persone, generi">
+              <select class="type-of-search" name="">
+                <option value="film">Film</option>
+                <option value="serietv">Serie TV</option>
+              </select>
             </li>
             <li><a href="#">BAMBINI</a></li>
             <li><a href="#"><i class="fas fa-gift"></i></a></li>
@@ -47,7 +51,7 @@
 
     <div class="wrapper">
       <div class="container">
-        <div class="row">
+        <div class="row movies">
 
             <div class="card">
               <img src="{{image}}" alt="" class="immagine">
@@ -63,6 +67,24 @@
             </div>
 
         </div>
+
+        <div class="row series">
+
+            <div class="card">
+              <img src="{{image}}" alt="" class="immagine">
+              <div class="text">
+                <h6 class="titolo">{{title}}</h6>
+                <h6 class="titolo-originale">{{original}}</h6>
+                <p class="lingua">{{language}}</p>
+                <small class="voto">{{rating}}</small>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
       </div>
     </div>
 

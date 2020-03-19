@@ -46,13 +46,12 @@ $(document).ready(function () {
               rating: Math.ceil(films[i].vote_average / 2)
             };
             var templateCompiled = template(film);
-            $(templateCompiled).insertAfter(".row .card:last-child");
+            $(templateCompiled).insertAfter(".row.movies .card:last-child");
 
             // GESTIONE STELLE RATING
             var percentualeRating = (film.rating * 100) / 5;
             console.log(percentualeRating);
-            $(".card:last-child").find(".stars-inner").css( "width", percentualeRating + "%");
-            // GESTIONE STELLE RATING
+            $(".row.movies .card:last-child").find(".stars-inner").css( "width", percentualeRating + "%");
           }
         },
         error: function (err) {
