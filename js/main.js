@@ -62,7 +62,6 @@ $(document).ready(function () {
         });
       } else if (moviesOrSeries == "serietv") {
         $.ajax({
-          // url: "https://api.themoviedb.org/3/search/movie?api_key=33dde37d29b1d13faeb21d0fefcc0389&query=ritorno+al+futuro",
           url: baseMovieUrl + "/search/tv",
           data: {
             api_key: "33dde37d29b1d13faeb21d0fefcc0389",
@@ -77,8 +76,8 @@ $(document).ready(function () {
               for (var i = 0; i < films.length; i++) {
                 var film = {
                   image: baseImageUrl + "/w342/" + films[i].poster_path,
-                  title: films[i].title,
-                  original: films[i].original_title,
+                  title: films[i].name,
+                  original: films[i].original_name,
                   language: films[i].original_language,
                   rating: Math.ceil(films[i].vote_average / 2)
                 };
