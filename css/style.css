@@ -113,10 +113,33 @@ header .actions li{
 .wrapper .row .card .text{
   width: 100%;
 }
-.wrapper .row .card .stars{
-  width: 100%;
+
+.wrapper .row .card .stars-outer {
+  display: inline-block;
+  position: relative;
 }
 
+.wrapper .row .card .stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+  font-family: "FontAwesome";
+  font-weight: 400;
+}
+
+.wrapper .row .card .stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  /* width: 0; */
+}
+
+.wrapper .row .card .stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "FontAwesome";
+  font-weight: 400;
+  color: #f8ce0b;
+}
 
 
 

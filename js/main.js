@@ -36,7 +36,7 @@ $(document).ready(function () {
         success: function (data) {
           // console.log(data);
           var films = data.results;
-          console.log(films);
+          // console.log(films);
           for (var i = 0; i < films.length; i++) {
             var film = {
               image: baseImageUrl + "/w342/" + films[i].poster_path,
@@ -47,6 +47,12 @@ $(document).ready(function () {
             };
             var templateCompiled = template(film);
             $(templateCompiled).insertAfter(".row .card:last-child");
+
+            // GESTIONE STELLE RATING
+            var percentualeRating = (film.rating * 100) / 5;
+            console.log(percentualeRating);
+            $(".card:last-child").find(".stars-inner").css( "width", percentualeRating + "%");
+            // GESTIONE STELLE RATING
           }
         },
         error: function (err) {
