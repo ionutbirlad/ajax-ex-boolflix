@@ -37,7 +37,7 @@ i{
 /* HEADER */
 header{
   height: 70px;
-  background: #141414;
+  background: #000000;
   color: #fff;
   font-size: 0.9rem;
   position: fixed;
@@ -45,6 +45,7 @@ header{
   top: 0;
   right: 0;
   z-index: 9999;
+  /* border-bottom: 1px solid linear-gradient(103deg, rgba(243,15,32,1) 0%, rgba(255,255,255,1) 75%); */
 }
 
 header .logo,
@@ -82,7 +83,7 @@ header .actions li{
 
 /* CORPO PRINCIPALE */
 .wrapper{
-  background: #353b48;
+  background: #141414;
   padding-top: 100px;
   color: #fff;
 }
