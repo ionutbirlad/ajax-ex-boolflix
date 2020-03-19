@@ -36,6 +36,12 @@ header{
   height: 70px;
   background: #141414;
   color: #fff;
+  font-size: 0.9rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 header .logo,
@@ -45,6 +51,9 @@ header .menu{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+header .menu{
+  margin-left: 20px;
 }
 header .actions{
   height: 70px;
@@ -70,14 +79,17 @@ header .actions li{
 
 /* CORPO PRINCIPALE */
 .wrapper{
-  background: #bdc3c7;
+  background: #353b48;
+  padding-top: 100px;
+  color: #fff;
 }
 .wrapper .row{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow-x: auto;
   min-height: 300px;
+  margin: 20px 0;
 }
 .wrapper .row::before{
   font-family: "FontAwesome";
@@ -102,7 +114,7 @@ header .actions li{
 .wrapper .row .card{
   /* min-width: 100px;
   min-height: 200px; */
-  background: #2ecc71;
+  /* background: #2ecc71; */
   color: #fff;
   border-radius: 10px;
   margin: 10px 15px;
