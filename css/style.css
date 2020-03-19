@@ -25,6 +25,9 @@ a{
   text-decoration: none;
   color: inherit;
 }
+i{
+  cursor: pointer;
+}
 /* GENERALE */
 
 
@@ -126,6 +129,11 @@ header .actions li{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  transform: scale(0);
+  transition: 0.4s;
+}
+.wrapper .row .card:hover .overlay{
+  transform: scale(1);
 }
 .wrapper .row .card:first-of-type{
   display: none;
@@ -136,8 +144,9 @@ header .actions li{
   display: block;
   border-radius: 10px;
 }
-.wrapper .row .card .text{
-  /* width: 100%; */
+.wrapper .row .card .text h6,
+.wrapper .row .card .text p{
+  font-size: 12px;
 }
 
 .wrapper .row .card .stars-outer {
