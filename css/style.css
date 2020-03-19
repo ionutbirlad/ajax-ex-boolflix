@@ -107,6 +107,9 @@ header .actions li{
   text-align: center;
   padding: 10px;
 }
+.wrapper .row .card:first-of-type{
+  display: none;
+}
 .wrapper .row .card img{
   width: 90px;
 }
