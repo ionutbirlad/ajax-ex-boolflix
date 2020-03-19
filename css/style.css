@@ -72,6 +72,7 @@ header .actions li{
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+  min-height: 300px;
 }
 .wrapper .row::before{
   font-family: "FontAwesome";
