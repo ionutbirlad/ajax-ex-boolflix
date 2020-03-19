@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/80a8b5f4b8.js" crossorigin="anonymous"></script>
-    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- favicon -->
   </head>
   <body>
@@ -57,13 +57,15 @@
 
             <div class="card">
               <img src="{{image}}" alt="" class="immagine">
-              <div class="text">
-                <h6 class="titolo">{{title}}</h6>
-                <h6 class="titolo-originale">{{original}}</h6>
-                <p class="lingua">{{language}}</p>
-                <small class="voto">{{rating}}</small>
-                <div class="stars-outer">
-                  <div class="stars-inner"></div>
+              <div class="overlay">
+                <div class="text">
+                  <h6 class="titolo">{{title}}</h6>
+                  <h6 class="titolo-originale">{{original}}</h6>
+                  <p class="lingua">{{language}}</p>
+                  <small class="voto">{{rating}}</small>
+                  <div class="stars-outer">
+                    <div class="stars-inner"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -75,13 +77,15 @@
 
             <div class="card">
               <img src="{{image}}" alt="" class="immagine">
-              <div class="text">
-                <h6 class="titolo">{{title}}</h6>
-                <h6 class="titolo-originale">{{original}}</h6>
-                <p class="lingua">{{language}}</p>
-                <small class="voto">{{rating}}</small>
-                <div class="stars-outer">
-                  <div class="stars-inner"></div>
+              <div class="overlay">
+                <div class="text">
+                  <h6 class="titolo">{{title}}</h6>
+                  <h6 class="titolo-originale">{{original}}</h6>
+                  <p class="lingua">{{language}}</p>
+                  <small class="voto">{{rating}}</small>
+                  <div class="stars-outer">
+                    <div class="stars-inner"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -94,13 +98,15 @@
     <script id="card-template" type="text/x-handlebars-template">
       <div class="card">
         <img src="{{image}}" alt="" class="immagine">
-        <div class="text">
-          <h6 class="titolo">{{title}}</h6>
-          <h6 class="titolo-originale">{{original}}</h6>
-          <p class="lingua">{{language}}</p>
-          <small class="voto">{{rating}}</small>
-          <div class="stars-outer">
-            <div class="stars-inner"></div>
+        <div class="overlay">
+          <div class="text">
+            <h6 class="titolo">{{title}}</h6>
+            <h6 class="titolo-originale">{{original}}</h6>
+            <p class="lingua">{{language}}</p>
+            <small class="voto">{{rating}}</small>
+            <div class="stars-outer">
+              <div class="stars-inner"></div>
+            </div>
           </div>
         </div>
       </div>
