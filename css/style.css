@@ -213,9 +213,11 @@ header .actions li{
     border:0px solid black;
 }
 
-.owl-prev,
-.owl-next {
-  transform : scale(1,6);
+.owl-prev i{
+  font-size: 60px;
+}
+.owl-next i {
+  font-size: 60px;
 }
 
 

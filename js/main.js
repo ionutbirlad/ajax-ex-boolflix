@@ -64,10 +64,11 @@ $(document).ready(function () {
                   items: 2,
                   margin: 20,
                   loop: true,
-                  // center: true,
+                  center: true,
                   dots: false,
                   autoWidth:true,
-                  nav: true
+                  nav: true,
+                  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
                 });
           },
           error: function (err) {
@@ -112,10 +113,11 @@ $(document).ready(function () {
                   items: 2,
                   margin: 20,
                   loop: true,
-                  // center: true,
+                  center: true,
                   dots: false,
                   autoWidth:true,
-                  nav: true
+                  nav: true,
+                  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
                 });
           },
           error: function (err) {
