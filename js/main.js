@@ -60,6 +60,15 @@ $(document).ready(function () {
                   $(".row.movies .card:last-child").find(".titolo").remove();
                 }
               }
+              $(".row.movies.owl-carousel").owlCarousel({
+                  items: 2,
+                  margin: 20,
+                  loop: true,
+                  center: true,
+                  dots: false,
+                  autoWidth:true,
+                  nav: true
+                });
           },
           error: function (err) {
             alert("Qualcosa è andato storto!");
@@ -99,6 +108,15 @@ $(document).ready(function () {
                   $(".row.series .card:last-child").find(".titolo").remove();
                 }
               }
+              $(".row.series.owl-carousel").owlCarousel({
+                  items: 2,
+                  margin: 20,
+                  loop: true,
+                  center: true,
+                  dots: false,
+                  autoWidth:true,
+                  nav: true
+                });
           },
           error: function (err) {
             alert("Qualcosa è andato storto!");

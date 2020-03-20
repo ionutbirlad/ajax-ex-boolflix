@@ -6,10 +6,12 @@
     <title>Boolflix</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/80a8b5f4b8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <!-- favicon -->
   </head>
   <body>
@@ -53,9 +55,9 @@
       <div class="container">
 
         <h2 class="titolo-row">Film</h2>
-        <div class="row movies">
+        <div class="row movies owl-carousel">
 
-            <div class="card">
+            <div class="card hidden">
               <img src="{{image}}" alt="" class="immagine">
               <div class="overlay">
                 <div class="text">
@@ -73,9 +75,9 @@
         </div>
 
         <h2 class="titolo-row">Serie TV</h2>
-        <div class="row series">
+        <div class="row series owl-carousel">
 
-            <div class="card">
+            <div class="card hidden">
               <img src="{{image}}" alt="" class="immagine">
               <div class="overlay">
                 <div class="text">

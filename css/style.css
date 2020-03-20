@@ -91,11 +91,11 @@ header .actions li{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   min-height: 300px;
   margin: 20px 0;
 }
-.wrapper .row::before{
+/* .wrapper .row::before{
   font-family: "FontAwesome";
   content: "\f053";
   font-weight: 900;
@@ -114,7 +114,7 @@ header .actions li{
   right: 20px;
   font-size: 30px;
   cursor: pointer;
-}
+} */
 .wrapper .row .card{
   /* min-width: 100px;
   min-height: 200px; */
@@ -151,7 +151,7 @@ header .actions li{
 .wrapper .row .card:hover .overlay{
   transform: scale(1);
 }
-.wrapper .row .card:first-of-type{
+.wrapper .row .card.hidden{
   display: none;
 }
 .wrapper .row .card img{
@@ -191,6 +191,15 @@ header .actions li{
   font-weight: 400;
   color: #f8ce0b;
 }
+
+/* OWL CAROUSEL */
+
+
+
+
+
+
+/* OWL CAROUSEL */
 
 
 
