@@ -193,7 +193,30 @@ header .actions li{
 }
 
 /* OWL CAROUSEL */
+.owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    margin-left: -20px;
+    display: block !important;
+    border:0px solid black;
+}
 
+.owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    right: -25px;
+    display: block !important;
+    border:0px solid black;
+}
+
+.owl-prev,
+.owl-next {
+  transform : scale(1,6);
+}
 
 
 

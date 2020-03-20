@@ -64,7 +64,7 @@ $(document).ready(function () {
                   items: 2,
                   margin: 20,
                   loop: true,
-                  center: true,
+                  // center: true,
                   dots: false,
                   autoWidth:true,
                   nav: true
@@ -112,7 +112,7 @@ $(document).ready(function () {
                   items: 2,
                   margin: 20,
                   loop: true,
-                  center: true,
+                  // center: true,
                   dots: false,
                   autoWidth:true,
                   nav: true
