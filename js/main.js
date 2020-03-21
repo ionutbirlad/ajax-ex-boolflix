@@ -1,8 +1,17 @@
 $(document).ready(function () {
 
+// PROFILE
+  $(".actions .fas.fa-sort-down").click(function () {
+    if ($("#profile-one").hasClass("active")) {
+      $("#profile-one").removeClass("active");
+    } else {
+      $("#profile-one").toggleClass("active");
+    }
+  });
+// PROFILE
 
 
-
+// PARALLAX
   function parallax(element, distance, speed) {
     const item = document.querySelector(element);
     // item.style.transform = "translateY(${distance * speed}px)";
@@ -16,10 +25,7 @@ $(document).ready(function () {
     parallax(".ball-three", window.scrollY, 0.4);
     parallax(".booflix", window.scrollY, 1);
   });
-
-
-
-
+  // PARALLAX
 
 
   // DA RIPETERE SOLO UNA VOLTA PER TEMPLATE
