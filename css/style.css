@@ -52,9 +52,10 @@ header{
 header .boolflix{
   height: 300px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 30%;
-  transform: translate(-60%, -30%);
+  transform: translate(-50%, -30%);
+  z-index: 1;
 }
 header .boolflix h1{
   font-size: 80px;
@@ -108,14 +109,15 @@ header .ball-three{
   transform: translate(-30%, -10%);
   transition: 0.1s;
 }
-/* header .fire{
+header .back{
   position: absolute;
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
   left: 0;
-  bottom: 0px;
+  bottom: 0;
   object-fit: cover;
-} */
+  /* z-index: -1; */
+}
 header a:hover{
   color: #808080;
 }
@@ -127,6 +129,8 @@ header .menu{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 header .menu{
   margin-left: 20px;
@@ -137,6 +141,8 @@ header .actions{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 
 header .logo img{
