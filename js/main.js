@@ -1,5 +1,27 @@
 $(document).ready(function () {
 
+
+
+
+  function parallax(element, distance, speed) {
+    const item = document.querySelector(element);
+    // item.style.transform = "translateY(${distance * speed}px)";
+    $(item).css('transform', 'translateY(' + (distance * speed) + 'px)');
+  }
+
+  window.addEventListener("scroll", function() {
+    parallax("header", window.scrollY, 0.6);
+    parallax(".ball-one", window.scrollY, 0.3);
+    parallax(".ball-two", window.scrollY, 0.2);
+    parallax(".ball-three", window.scrollY, 0.4);
+    parallax(".booflix", window.scrollY, 1);
+  });
+
+
+
+
+
+
   // DA RIPETERE SOLO UNA VOLTA PER TEMPLATE
   var source = $("#card-template").html();
   var template = Handlebars.compile(source);
@@ -147,8 +169,6 @@ $(document).ready(function () {
       }
     }
   }
-
-
 
 
 

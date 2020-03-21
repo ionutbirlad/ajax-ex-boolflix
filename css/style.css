@@ -12,12 +12,10 @@
   display: table;
   clear: both;
 }
-
 .container{
   max-width: 1200px;
   margin: 0 auto;
 }
-
 li{
   list-style: none;
 }
@@ -37,17 +35,84 @@ i{
 
 /* HEADER */
 header{
-  height: 70px;
+  /* height: 70px; */
+  min-height: 100vh;
   background: #000000;
   color: #fff;
   font-size: 0.9rem;
-  position: fixed;
+  /* position: fixed;
   left: 0;
   top: 0;
-  right: 0;
-  z-index: 9999;
+  right: 0; */
+  /* z-index: -1; */
+  position: relative;
+  top: 0;
   /* border-bottom: 1px solid linear-gradient(103deg, rgba(243,15,32,1) 0%, rgba(255,255,255,1) 75%); */
 }
+header .boolflix{
+  height: 300px;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-60%, -30%);
+}
+header .boolflix h1{
+  font-size: 80px;
+  color: #f30f20;
+}
+header .boolflix h2{
+
+}
+header .boolflix button{
+  padding: 20px 40px;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: 2px solid #00000050;
+  cursor: pointer;
+  background-color: none;
+  transition: 0.3s;
+}
+header .boolflix button:hover{
+  background-color: #f30f20;
+}
+header .ball-one{
+  width: 100px;
+  height: 100px;
+  background: #f30f20;
+  border-radius: 50px;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  transform: translate(-30%, -20%);
+}
+header .ball-two{
+  width: 70px;
+  height: 70px;
+  background: #f30f20;
+  border-radius: 50px;
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  transform: translate(-40%, -30%);
+}
+header .ball-three{
+  width: 50px;
+  height: 50px;
+  background: #f30f20;
+  border-radius: 50px;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  transform: translate(-30%, -10%);
+}
+/* header .fire{
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  bottom: 0px;
+  object-fit: cover;
+} */
 header a:hover{
   color: #808080;
 }
@@ -90,6 +155,9 @@ header .actions li{
   background: #141414;
   padding-top: 100px;
   color: #fff;
+  min-height: 100vh;
+  z-index: 9999;
+  position: relative;
 }
 .wrapper .row{
   display: flex;
