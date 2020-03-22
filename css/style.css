@@ -49,6 +49,8 @@ header{
   /* z-index: -1; */
   position: relative;
   top: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   /* border-bottom: 1px solid linear-gradient(103deg, rgba(243,15,32,1) 0%, rgba(255,255,255,1) 75%); */
 }
 header .boolflix{
@@ -456,6 +458,21 @@ footer .row-small{
   width: 35px;
   height: 35px;
 }
+
+
+::-webkit-scrollbar{
+  background: #ddd;
+  width: 14px;
+}
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 10px #00000070;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: #14141490;
+  border-radius: 10px;
+}
+
 
 
 
