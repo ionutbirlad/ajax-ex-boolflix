@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  scroll-behavior: smooth;
 }
 
 .clearfix::after{
@@ -436,6 +437,24 @@ footer .row-small{
   height: 50px;
   font-size: 10px;
   letter-spacing: 2px;
+}
+
+.go-to-top{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f30f20;
+  color: #000000;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 99999;
+}
+.go-to-top i{
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 

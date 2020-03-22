@@ -11,9 +11,6 @@ $(document).ready(function () {
     menu.slideDown();
     menu.css("display", "flex");
   });
-
-
-
 // MENU NASCOSTO
 
 
