@@ -37,7 +37,7 @@ $(document).ready(function () {
     parallax(".ball-one", window.scrollY, 0.3);
     parallax(".ball-two", window.scrollY, 0.2);
     parallax(".ball-three", window.scrollY, 0.4);
-    parallax(".booflix", window.scrollY, 1);
+    // parallax(".booflix", window.scrollY, 1);
   });
   // PARALLAX
 
