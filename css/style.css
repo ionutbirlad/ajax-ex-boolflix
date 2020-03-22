@@ -90,7 +90,7 @@ header .ball-one{
   top: 30%;
   right: 20%;
   transform: translate(-30%, -20%);
-  transition: 0.1s;
+  /* transition: 0.1s; */
 }
 header .ball-two{
   width: 70px;
@@ -101,7 +101,7 @@ header .ball-two{
   top: 40%;
   right: 30%;
   transform: translate(-40%, -30%);
-  transition: 0.1s;
+  /* transition: 0.1s; */
 }
 header .ball-three{
   width: 50px;
@@ -112,7 +112,7 @@ header .ball-three{
   top: 30%;
   right: 10%;
   transform: translate(-30%, -10%);
-  transition: 0.1s;
+  /* transition: 0.1s; */
 }
 header .back{
   position: absolute;
