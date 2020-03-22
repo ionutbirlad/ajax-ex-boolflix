@@ -1,5 +1,22 @@
 $(document).ready(function () {
 
+
+// MENU NASCOSTO
+  $("header .menu .fas.fa-times").click(function () {
+    var menu = $("header .menu");
+    menu.slideUp();
+  });
+  $("header .fas.fa-bars").click(function () {
+    var menu = $("header .menu");
+    menu.slideDown();
+    menu.css("display", "flex");
+  });
+
+
+
+// MENU NASCOSTO
+
+
 // PROFILE
   $(".actions .fas.fa-sort-down").click(function () {
     if ($("#profile-one").hasClass("active")) {

@@ -211,6 +211,14 @@ header #search-text{
 #profile-two .bottom a{
   display: block;
 }
+
+header .fas.fa-bars{
+  float: right;
+  display: none;
+}
+header .fas.fa-times{
+  display: none;
+}
 /* HEADER */
 
 
