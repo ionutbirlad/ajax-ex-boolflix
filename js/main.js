@@ -51,30 +51,42 @@ $(document).ready(function () {
 
 
   $(".actions .fas.fa-search").click(function () {
-    if ($(".row.movies").hasClass("owl-loaded")) {
-      // $(".row.movies").removeClass("owl-loaded");
-      // $(".row.movies").removeClass("owl-theme");
+
+    var moviesOrSeries = $(".type-of-search").val();
+    if (moviesOrSeries == "film") {
       $(".row.movies .owl-stage").empty();
-      $(".row.movies .owl-stage").append(hiddenCard);
+      var $owl = $('.row.movies.owl-carousel');
+      $owl.trigger('destroy.owl.carousel');
+      $owl.html($owl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+    } else if (moviesOrSeries == "serietv") {
+      $(".row.series .owl-stage").empty();
+      var $owl = $('.row.series.owl-carousel');
+      $owl.trigger('destroy.owl.carousel');
+      $owl.html($owl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
     }
-    // $(".row.movies .card.hidden").siblings().remove();
+
     ricercaFilm();
   });
   $("#search-text").keypress(function (event) {
     if (event.keyCode == 13) {
-      // if ($(".row.movies").hasClass("owl-loaded")) {
-      //   // $(".row.movies").removeClass("owl-loaded");
-      //   // $(".row.movies").removeClass("owl-theme");
-      //   // $(".row.movies").removeClass("owl-drag");
-      //   // $(".owl-item").parentsUntil(".row.movies").remove();
-      //   // $(".row.movies").find(".owl-nav").remove();
-      //   // $(".row.movies").find(".owl-dots").remove();
-      //   // $(".row.movies").append(hiddenCard);
-      //   $('.owl-carousel').trigger('refresh.owl.carousel');
-      // }
+
+      var moviesOrSeries = $(".type-of-search").val();
+      if (moviesOrSeries == "film") {
+        $(".row.movies .owl-stage").empty();
+        var $owl = $('.row.movies.owl-carousel');
+        $owl.trigger('destroy.owl.carousel');
+        $owl.html($owl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+      } else if (moviesOrSeries == "serietv") {
+        $(".row.series .owl-stage").empty();
+        var $owl = $('.row.series.owl-carousel');
+        $owl.trigger('destroy.owl.carousel');
+        $owl.html($owl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+      }
+
       ricercaFilm();
     }
   });
+
 
 // PARTI FISSE API
   var baseMovieOrTvShowUrl = "https://api.themoviedb.org/3";
@@ -110,7 +122,8 @@ $(document).ready(function () {
                   rating: Math.ceil(films[i].vote_average / 2)
                 };
                   var templateCompiled = template(film);
-                  $(templateCompiled).insertAfter(".row.movies .card:last-child");
+                  // $(templateCompiled).insertAfter(".row.movies .card:last-child");
+                  $(".row.movies").append(templateCompiled);
 
                 // GESTIONE STELLE RATING
                 var percentualeRating = (film.rating * 100) / 5;
@@ -159,7 +172,8 @@ $(document).ready(function () {
                   rating: Math.ceil(series[i].vote_average / 2)
                 };
                   var templateCompiled = template(tvShow);
-                  $(templateCompiled).insertAfter(".row.series .card:last-child");
+                  // $(templateCompiled).insertAfter(".row.series .card:last-child");
+                  $(".row.series").append(templateCompiled);
 
                 // GESTIONE STELLE RATING
                 var percentualeRating = (tvShow.rating * 100) / 5;
