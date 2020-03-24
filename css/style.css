@@ -298,8 +298,8 @@ header .fas.fa-times{
   transform: scale(0);
   transition: 0.4s;
 }
-.wrapper .row .owl-item .overlay.bottom{
-  /* bottom: -225px; */
+.wrapper .row .owl-item .overlay .cast.hidden{
+  display: none;
 
 }
 .wrapper .row .owl-stage-outer{

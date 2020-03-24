@@ -1,5 +1,37 @@
 $(document).ready(function () {
 
+  // VISUALIZZAZIONE CAST AL CLICK SULLA CARD
+  $(document).on("click", ".card", function () {
+    var myThis = $(this);
+    var row = myThis.parents(".row");
+    var idFilm = $(this).data("id");
+    var castRequest = "/movie/" + idFilm + "/credits";
+    $.ajax({
+      url: baseMovieOrTvShowUrl + castRequest,
+      data: {
+        api_key: "33dde37d29b1d13faeb21d0fefcc0389",
+      },
+      method: "GET",
+      success: function (data) {
+        var cast = data.cast;
+        console.log(cast);
+        for (var i = 0; i < 4; i++) {
+          var daAppendere = $(".cast").clone();
+          daAppendere.text("");
+          daAppendere.text(cast[i].name);
+          $(myThis).find(".cast-outer").append(daAppendere);
+        }
+      },
+      error: function (err) {
+        console.log("Qualcosa è andato storto!");
+      }
+    });
+  });
+
+
+
+  // VISUALIZZAZIONE CAST AL CLICK SULLA CARD
+
   // GESTIONE INFO CARD
   $(document).on("click", ".owl-item", function () {
     var myThis = $(this);
@@ -7,17 +39,21 @@ $(document).ready(function () {
       $(this).find(".overlay").removeClass("bottom");
       $(this).find(".overlay").css("transform", "translateY(0)", "scale(0)");
       $(this).find(".overlay").css("width", "100%");
+      $(this).find(".cast").addClass("hidden");
       $(this).parents(".row").css("min-height", "300px");
     } else {
       $(this).find(".overlay").addClass("bottom");
       $(this).find(".overlay").css("transform", "translateY(100%)", "scale(1)");
       $(this).find(".overlay").css("width", "200%");
+      $(this).find(".cast").removeClass("hidden");
       $(this).parents(".row").css("min-height", "450px");
     }
   });
   $(document).on("mouseleave", ".owl-item", function () {
         $(this).find(".overlay").css("transform", "scale(0)");
         $(this).find(".overlay").css("width", "100%");
+        $(this).find(".cast").addClass("hidden");
+        $(this).find(".cast-outer").children(".cast").siblings().remove();
         $(this).parents(".row").css("min-height", "300px");
   });
   $(document).on("mouseenter", ".owl-item", function () {
@@ -164,7 +200,8 @@ $(document).ready(function () {
                   title: films[i].title,
                   original: films[i].original_title,
                   language: films[i].original_language,
-                  rating: Math.ceil(films[i].vote_average / 2)
+                  rating: Math.ceil(films[i].vote_average / 2),
+                  idCard: films[i].id
                 };
                   var templateCompiled = template(film);
                   // $(templateCompiled).insertAfter(".row.movies .card:last-child");
@@ -214,7 +251,8 @@ $(document).ready(function () {
                   title: series[i].name,
                   original: series[i].original_name,
                   language: series[i].original_language,
-                  rating: Math.ceil(series[i].vote_average / 2)
+                  rating: Math.ceil(series[i].vote_average / 2),
+                  idCard: series[i].id
                 };
                   var templateCompiled = template(tvShow);
                   // $(templateCompiled).insertAfter(".row.series .card:last-child");

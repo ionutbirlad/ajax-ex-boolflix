@@ -200,12 +200,15 @@
     </div>
 
     <script id="card-template" type="text/x-handlebars-template">
-      <div class="card">
+      <div class="card" data-id="{{idCard}}">
         <img src="{{image}}" alt="" class="immagine">
         <div class="overlay">
           <div class="text">
             <h6 class="titolo-originale">Titolo originale: <br> {{original}}</h6>
             <h6 class="titolo">Titolo italiano: <br> {{title}}</h6>
+            <div class="cast-outer">
+              <span class="cast hidden">Cast:</span> 
+            </div>
             <p class="lingua">Lingua: <br> {{language}}</p>
             <small class="voto">{{rating}}</small>
             <div class="stars-outer">
