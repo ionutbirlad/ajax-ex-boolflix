@@ -16,6 +16,8 @@
 .container{
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
 }
 li{
   list-style: none;
@@ -241,6 +243,7 @@ header .fas.fa-times{
   /* overflow-x: auto; */
   min-height: 300px;
   margin: 20px 0;
+  transition: 0.4s;
 }
 /* .wrapper .row::before{
   font-family: "FontAwesome";
@@ -295,9 +298,63 @@ header .fas.fa-times{
   transform: scale(0);
   transition: 0.4s;
 }
-.wrapper .row .card:hover .overlay{
-  transform: scale(1);
+.wrapper .row .owl-item .overlay.bottom{
+  /* bottom: -225px; */
+
 }
+.wrapper .row .owl-stage-outer{
+  overflow: inherit;
+}
+.wrapper .large-one,
+.wrapper .large-two{
+  position: relative;
+}
+.wrapper .large-one .fa.fa-angle-left{
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  display: block;
+  border:0px solid black;
+  font-size: 60px;
+}
+.wrapper .large-one .fa.fa-angle-right{
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  right: 15px;
+  display: block;
+  border:0px solid black;
+  font-size: 60px;
+}
+.wrapper .large-two .fa.fa-angle-left{
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  display: block;
+  border:0px solid black;
+  font-size: 60px;
+}
+.wrapper .large-two .fa.fa-angle-right{
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  right: 15px;
+  display: block;
+  border:0px solid black;
+  font-size: 60px;
+}
+/* .wrapper .row .card:hover .overlay{
+  transform: scale(1);
+} */
+/* .wrapper .row:hover{
+  min-height: 450px;
+} */
 .wrapper .row .card.hidden{
   display: none;
 }
@@ -340,7 +397,7 @@ header .fas.fa-times{
 }
 
 /* OWL CAROUSEL */
-.owl-prev {
+/* .owl-prev {
     width: 15px;
     height: 100px;
     position: absolute;
@@ -358,7 +415,7 @@ header .fas.fa-times{
     right: -25px;
     display: block !important;
     border:0px solid black;
-}
+} */
 
 .owl-prev i{
   font-size: 60px;

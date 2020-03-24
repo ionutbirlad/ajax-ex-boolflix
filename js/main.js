@@ -1,5 +1,50 @@
 $(document).ready(function () {
 
+  // GESTIONE INFO CARD
+  $(document).on("click", ".owl-item", function () {
+    var myThis = $(this);
+    if ($(this).find(".overlay").hasClass("bottom")) {
+      $(this).find(".overlay").removeClass("bottom");
+      $(this).find(".overlay").css("transform", "translateY(0)", "scale(0)");
+      $(this).find(".overlay").css("width", "100%");
+      $(this).parents(".row").css("min-height", "300px");
+    } else {
+      $(this).find(".overlay").addClass("bottom");
+      $(this).find(".overlay").css("transform", "translateY(100%)", "scale(1)");
+      $(this).find(".overlay").css("width", "200%");
+      $(this).parents(".row").css("min-height", "450px");
+    }
+  });
+  $(document).on("mouseleave", ".owl-item", function () {
+        $(this).find(".overlay").css("transform", "scale(0)");
+        $(this).find(".overlay").css("width", "100%");
+        $(this).parents(".row").css("min-height", "300px");
+  });
+  $(document).on("mouseenter", ".owl-item", function () {
+        $(this).find(".overlay").css("transform", "scale(1)");
+  });
+  // GESTIONE INFO CARD
+
+  // NAV OWL
+  var carouselEl = $('.row.movies.owl-carousel');
+  var carouselE2 = $('.row.series.owl-carousel');
+
+    $(".large-one .my-next-button").click(function() {
+        carouselEl.trigger('next.owl.carousel');
+    });
+
+    $(".large-one .my-previous-button").click(function() {
+        carouselEl.trigger('prev.owl.carousel');
+    });
+    $(".large-two .my-next-button").click(function() {
+        carouselE2.trigger('next.owl.carousel');
+    });
+
+    $(".large-two .my-previous-button").click(function() {
+        carouselE2.trigger('prev.owl.carousel');
+    });
+  // NAV OWL
+
 
 // MENU NASCOSTO
   $("header .menu .fas.fa-times").click(function () {
@@ -142,7 +187,7 @@ $(document).ready(function () {
                   center: true,
                   dots: false,
                   autoWidth:true,
-                  nav: true,
+                  nav: false,
                   navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
                 });
           },
@@ -192,7 +237,7 @@ $(document).ready(function () {
                   center: true,
                   dots: false,
                   autoWidth:true,
-                  nav: true,
+                  nav: false,
                   navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
                 });
           },
