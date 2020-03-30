@@ -14,13 +14,18 @@ $(document).ready(function () {
       method: "GET",
       success: function (data) {
         var cast = data.cast;
-        console.log(cast);
-        for (var i = 0; i < 4; i++) {
-          var daAppendere = $(".cast").clone();
-          daAppendere.text("");
-          daAppendere.text(cast[i].name);
-          $(myThis).find(".cast-outer").append(daAppendere);
+        // console.log(cast);
+        var primiCinque = [];
+        for (var i = 0; i < 5; i++) {
+          primiCinque.push(cast[i].name);
         }
+        // console.log(primiCinque);
+        $(".cast-outer").find(".cast:first-child").siblings().remove();
+        var daAppendere = $(".cast:first-child").clone();
+        daAppendere.empty();
+        daAppendere.text(primiCinque);
+        $(myThis).find(".cast-outer").append(daAppendere);
+        primiCinque = [];
       },
       error: function (err) {
         console.log("Qualcosa è andato storto!");
@@ -40,6 +45,7 @@ $(document).ready(function () {
       $(this).find(".overlay").css("transform", "translateY(0)", "scale(0)");
       $(this).find(".overlay").css("width", "100%");
       $(this).find(".cast").addClass("hidden");
+      $(this).find(".cast-outer").find(".cast:first-child").siblings().remove();
       $(this).parents(".row").css("min-height", "300px");
     } else {
       $(this).find(".overlay").addClass("bottom");
@@ -53,7 +59,7 @@ $(document).ready(function () {
         $(this).find(".overlay").css("transform", "scale(0)");
         $(this).find(".overlay").css("width", "100%");
         $(this).find(".cast").addClass("hidden");
-        $(this).find(".cast-outer").children(".cast").siblings().remove();
+        $(this).find(".cast-outer").find(".cast:first-child").siblings().remove();
         $(this).parents(".row").css("min-height", "300px");
   });
   $(document).on("mouseenter", ".owl-item", function () {
